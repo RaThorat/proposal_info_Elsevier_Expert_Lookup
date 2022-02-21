@@ -1,0 +1,31 @@
+In preparation, the number of files that you must download and edit in Excel in advance are:
+1. Example list request information from expert Lookup 'Proposal Upload Example.xlsx'
+a. Put worksheets 'Suggested reviewers' and 'country sheet' from 'Proposal Upload Example.xlsx' as separate Excel files
+b. Manually fill the 'Suggested reviewers' Excel with information, if available for the entire set of applications
+2. Applications information pivot table from funding organisation data warehouse for the entire set of applications or the SQL query which creates the applications information
+
+The code creates graphic user interface via Tkinter.
+
+The steps how the code works:
+
+# Step 1 Editing applications information from pivot table of data warehouse
+1.a.Select information by round (using SQL query)
+
+# Step 2 Edit information in terms of 'Proposal Upload Example.xlsx' from expert Lookup
+2.a Formulating information for 'Proposal Details' worksheet
+2.b.i Formulating information for 'Proposal Applicants' worksheet, main applicant
+2.b.ii Formulating information for the 'Proposal Applicants' worksheet, co-applicant (if applicable)
+2.c Call the Excel file sheets 'Suggested reviewers' and 'country sheet' 
+
+# Step 3 Bundling and downloading request information in one Excel workbook 'Proposal info to feed in EL.xlsx'
+ 
+The next step is intended for the entire set of requests to edit in the Excel file environment.
+
+# Step 4 Check request information Excel
+Check whether the form of the downloaded Excel sheet 'Proposal info to feed in EL.xlsx' matches the example 'Proposal Upload Example.xlsx'. In particular, the column names must be the same. Add any additional information (keywords under 'Proposal details', Institution and country under 'proposal applicants', etc.).
+The following steps must be performed in the Expert Lookup.
+
+# Step 5 Upload requests information for the entire set of requests in Expert Lookup
+In the environment of workspace - Export Lookup, use 'import proposals' to upload application information Excel 'Proposal info to feed in EL'.
+If you get an error message, check the form of the Excel file (step 4) again. If the problem still persists, copy the information from 'Proposal info to feed in EL.xlsx' and paste in 'Proposal Upload Example.xlsx'. Then upload 'Proposal Upload Example.xlsx' in expert Lookup.
+It takes some time to upload all the information, but the Expert lookup shows a note when it's done.
