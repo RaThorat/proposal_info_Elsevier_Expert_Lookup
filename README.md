@@ -24,7 +24,16 @@ The code then uses the pyodbc module to connect to the SQL Server and execute th
 
 Finally, the code includes a comment indicating that the data in the dataframe can be exported as an Excel file if desired.
 
-## Step : 
+## Step : Edit information in the format of example from Expert Lookup
+This code is part of a larger project that is intended to edit information from an Excel file called 'Proposal Upload Example.xlsx' and create two new DataFrames: 'Proposal Details' and 'Proposal Applicants'. The 'Proposal Details' DataFrame contains information about grant proposals, including the grant number, council name, proposal title, abstract, specific aims, and keywords. The 'Proposal Applicants' DataFrame contains information about the applicants for each grant proposal, including their name, email, affiliation, country, and role in the proposal.
+
+The code begins by creating the 'Proposal Details' DataFrame, and then assigns values to each of its columns. The 'Grant No.' and 'No' columns are taken from the 'dossiernummer' column of the 'df_pv2' DataFrame, and the 'Council' column is given a fixed value of 'Name of the funder'. The 'Proposal Title', 'Abstract', and 'Keywords' columns are taken directly from the 'df_pv2' DataFrame.
+
+The 'Proposal Applicants' DataFrame is then created and its columns are given values. The 'Grant No.' and 'Proposal Number' columns are taken from the 'dossiernummer' column of the 'df_pv2' DataFrame, and the 'Last Name' and 'First Name' columns are taken from the 'achternaam' and 'voornaam' columns of 'df_pv2', respectively. The 'Email', 'Affiliation', and 'Country' columns are also taken from 'df_pv2', and the 'Role' column is given a fixed value of 'Principal Investigator'. The 'Is Principal Investigator?' column is given a fixed value of 'Yes'.
+
+The code then creates a new DataFrame called 'df_colab_1' by grouping and aggregating the 'df_colab_0' DataFrame and renaming its 'woord' column to 'Trefwoorden'. Finally, the 'df_colab' DataFrame is created and its columns are given values taken from the 'df_colab_1' DataFrame. The 'Role' column is given a fixed value of 'Co-applicant', and the 'Is Principal Investigator?' column is given a fixed value of 'No'.
+
+## Step: 
 
 
 
