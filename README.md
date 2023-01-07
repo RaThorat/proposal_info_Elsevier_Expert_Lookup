@@ -33,8 +33,5 @@ The 'Proposal Applicants' DataFrame is then created and its columns are given va
 
 The code then creates a new DataFrame called 'df_colab_1' by grouping and aggregating the 'df_colab_0' DataFrame and renaming its 'woord' column to 'Trefwoorden'. Finally, the 'df_colab' DataFrame is created and its columns are given values taken from the 'df_colab_1' DataFrame. The 'Role' column is given a fixed value of 'Co-applicant', and the 'Is Principal Investigator?' column is given a fixed value of 'No'.
 
-## Step: 
-
-
-
-
+## Step: Bundeling all information in a single file
+This code is used to create an Excel workbook with four worksheets. The first worksheet, "Proposal Details," is created using the data from the Pandas Dataframe "df_PD." The second worksheet, "Proposal Applicants," is created using the data from the Pandas Dataframe "df_PA33." The third worksheet, "Suggested Reviewers," is created using the data from the Pandas Dataframe "df_SR." The fourth worksheet, "Country Sheet," is created using the data from the Pandas Dataframe "df_CS." The data for each worksheet is added to the worksheet using the openpyxl.utils.dataframe.dataframe_to_rows() function. The worksheets are then saved in an Excel workbook with the file name "Proposal info to feed in EL.xlsx."
